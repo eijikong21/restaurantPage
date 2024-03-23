@@ -15,7 +15,7 @@
   \**********************/
 /***/ (() => {
 
-eval("console.log('test welcome');\n\n//# sourceURL=webpack://restaurantpage/./src/index.js?");
+eval("const div = document.getElementById('content');\r\nconst img = document.createElement('img');\r\nconst h1 = document.createElement('h1');\r\nconst p = document.createElement('p');\r\nconsole.log('test');\r\n\r\nimg.src='https://cdn.pixabay.com/photo/2017/07/15/13/45/french-restaurant-2506490_960_720.jpg';\r\nh1.textContent='Welcome to our Restaurant Webpage';\r\np.textContent='Our restaurant aims to serve you the best and unique food that you would ever taste in your entire life, so what are you waiting for dont waste the chance of consuming food in our wonderful place';\r\ndiv.appendChild(img);\r\ndiv.appendChild(h1);\r\ndiv.appendChild(p);\n\n//# sourceURL=webpack://restaurantpage/./src/index.js?");
 
 /***/ })
 
