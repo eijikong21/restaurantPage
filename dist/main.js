@@ -1,3 +1,4 @@
+"use strict";
 /*
  * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
  * This devtool is neither made for production nor for readable output files.
@@ -6,9 +7,7 @@
  * or disable the default devtool with "devtool: false".
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
-/******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
-/******/ 	var __webpack_modules__ = ({
+(self["webpackChunkrestaurantpage"] = self["webpackChunkrestaurantpage"] || []).push([["main"],{
 
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/style.css":
 /*!*************************************************************!*\
@@ -116,88 +115,13 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\r\nconst newUl = document.createElement('ul');\r\nconst newLi = document.createElement('li');\r\nconst div = document.getElementById('content');\r\nconst img = document.createElement('img');\r\nconst h1 = document.createElement('h1');\r\nconst p = document.createElement('p');\r\nconst homeButton = document.querySelector('.home');\r\nconst menuButton = document.querySelector('.menu');\r\nconst contactButton = document.querySelector('.contact');\r\nconst createDiv = document.createElement('div');\r\n\r\nconsole.log('test');\r\ncreateDiv.className='home-div';\r\ndiv.appendChild(createDiv);\r\nconst homeDiv = document.querySelector('.home-div');\r\nimg.src='https://cdn.pixabay.com/photo/2017/07/15/13/45/french-restaurant-2506490_960_720.jpg';\r\nh1.textContent='Welcome to our Restaurant Webpage';\r\np.textContent='Our restaurant aims to serve you the best and unique food that you\\n would ever taste in your entire life, so what are you waiting for dont\\n waste the chance of consuming food in our wonderful place';\r\nhomeDiv.appendChild(img);\r\nhomeDiv.appendChild(h1);\r\nhomeDiv.appendChild(p);\r\n\r\nhomeButton.addEventListener('click',()=>{\r\n    createDiv.className='home-div';\r\n    \r\n    div.appendChild(createDiv);\r\n    img.src='https://cdn.pixabay.com/photo/2017/07/15/13/45/french-restaurant-2506490_960_720.jpg';\r\n    h1.textContent='Welcome to our Restaurant Webpage';\r\n    p.textContent='Our restaurant aims to serve you the best and unique food that you\\n would ever taste in your entire life, so what are you waiting for dont\\n waste the chance of consuming food in our wonderful place';\r\n  div.appendChild(homeDiv);\r\n    console.log('home button clicked');\r\n})\r\n\r\nmenuButton.addEventListener('click',()=>{\r\n    div.removeChild(homeDiv);\r\n    // createDiv.className='menu-div';\r\n    // div.appendChild(createDiv);\r\n    // const menuDiv = document.querySelector('.menu-div');\r\n    // h1.textContent='this is menu';\r\n    // menuDiv.appendChild(h1);\r\n    console.log('menu button clicked');\r\n    \r\n})\r\ncontactButton.addEventListener('click',()=>{\r\n    \r\n    h1.textContent='this is contact';\r\n    contactDiv.appendChild(h1);\r\n    console.log('contact button clicked');\r\n})\n\n//# sourceURL=webpack://restaurantpage/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\r\nconst newUl = document.createElement('ul');\r\nconst newLi = document.createElement('li');\r\nconst div = document.getElementById('content');\r\nconst img = document.createElement('img');\r\nconst h1 = document.createElement('h1');\r\nconst p = document.createElement('p');\r\nconst homeButton = document.querySelector('.home');\r\nconst menuButton = document.querySelector('.menu');\r\nconst contactButton = document.querySelector('.contact');\r\nconst createhomeDiv = document.createElement('div');\r\nconst createmenuDiv = document.createElement('div');\r\nconst createcontactDiv = document.createElement('div');\r\nconst newDiv = document.createElement('div');\r\n\r\n\r\n\r\nconsole.log('test');\r\ncreatehomeDiv.className='home-div';\r\ndiv.appendChild(createhomeDiv);\r\nconst homeDiv = document.querySelector('.home-div');\r\nimg.src='https://cdn.pixabay.com/photo/2017/07/15/13/45/french-restaurant-2506490_960_720.jpg';\r\nh1.textContent='Welcome to our Restaurant Webpage';\r\np.textContent='Our restaurant aims to serve you the best and unique food that you\\n would ever taste in your entire life, so what are you waiting for dont\\n waste the chance of consuming food in our wonderful place';\r\nhomeDiv.appendChild(img);\r\nhomeDiv.appendChild(h1);\r\nhomeDiv.appendChild(p);\r\n\r\nhomeButton.addEventListener('click',()=>{\r\n   \r\n    if(div.contains(createcontactDiv)){\r\n               div.removeChild(createcontactDiv);\r\n              }\r\n    else if(div.contains(createmenuDiv)){\r\n        div.removeChild(createmenuDiv);\r\n       }\r\n       \r\n    img.src='https://cdn.pixabay.com/photo/2017/07/15/13/45/french-restaurant-2506490_960_720.jpg';\r\n    h1.textContent='Welcome to our Restaurant Webpage';\r\n    p.textContent='Our restaurant aims to serve you the best and unique food that you\\n would ever taste in your entire life, so what are you waiting for dont\\n waste the chance of consuming food in our wonderful place';\r\n    createhomeDiv.className='home-div';\r\n    div.appendChild(createhomeDiv);\r\n    const homeDiv = document.querySelector('.home-div');\r\n    homeDiv.appendChild(img);\r\n    homeDiv.appendChild(h1);\r\n    homeDiv.appendChild(p);\r\n    console.log('home button clicked');\r\n})\r\n\r\nmenuButton.addEventListener('click',()=>{\r\n    if(div.contains(createhomeDiv)){\r\n        div.removeChild(createhomeDiv);\r\n       }\r\nelse if(div.contains(createcontactDiv)){\r\n div.removeChild(createcontactDiv);\r\n}\r\n\r\n    \r\n   \r\n    createmenuDiv.className='menu-div';\r\n    div.appendChild(createmenuDiv);\r\n    const menuDiv = document.querySelector('.menu-div');\r\n    h1.textContent=\"menu button pressed\";\r\n    menuDiv.appendChild(h1);\r\n    console.log('menu button clicked');\r\n    \r\n})\r\n\r\ncontactButton.addEventListener('click',()=>{\r\n    if(div.contains(createhomeDiv)){\r\n        div.removeChild(createhomeDiv);\r\n       }\r\nelse if(div.contains(createmenuDiv)){\r\n div.removeChild(createmenuDiv);\r\n}\r\n    createcontactDiv.className='contact-div';\r\n    div.appendChild(createcontactDiv);\r\n    const contactDiv = document.querySelector('.contact-div');\r\n    h1.textContent=\"contact button pressed\";\r\n    contactDiv.appendChild(h1);\r\n    console.log('menu button clicked');\r\n    console.log('contact button clicked');\r\n})\n\n//# sourceURL=webpack://restaurantpage/./src/index.js?");
 
 /***/ })
 
-/******/ 	});
-/************************************************************************/
-/******/ 	// The module cache
-/******/ 	var __webpack_module_cache__ = {};
-/******/ 	
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/ 		// Check if module is in cache
-/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
-/******/ 		if (cachedModule !== undefined) {
-/******/ 			return cachedModule.exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			id: moduleId,
-/******/ 			// no module.loaded needed
-/******/ 			exports: {}
-/******/ 		};
-/******/ 	
-/******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/ 	
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/ 	
-/************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
-/******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = (exports) => {
-/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 			}
-/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/nonce */
-/******/ 	(() => {
-/******/ 		__webpack_require__.nc = undefined;
-/******/ 	})();
-/******/ 	
-/************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
-/******/ 	
-/******/ })()
-;
+},
+/******/ __webpack_require__ => { // webpackRuntimeModules
+/******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+/******/ var __webpack_exports__ = (__webpack_exec__("./src/index.js"));
+/******/ }
+]);

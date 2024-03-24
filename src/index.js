@@ -27,6 +27,7 @@ homeDiv.appendChild(h1);
 homeDiv.appendChild(p);
 
 homeButton.addEventListener('click',()=>{
+   
     if(div.contains(createcontactDiv)){
                div.removeChild(createcontactDiv);
               }
@@ -39,6 +40,10 @@ homeButton.addEventListener('click',()=>{
     p.textContent='Our restaurant aims to serve you the best and unique food that you\n would ever taste in your entire life, so what are you waiting for dont\n waste the chance of consuming food in our wonderful place';
     createhomeDiv.className='home-div';
     div.appendChild(createhomeDiv);
+    const homeDiv = document.querySelector('.home-div');
+    homeDiv.appendChild(img);
+    homeDiv.appendChild(h1);
+    homeDiv.appendChild(p);
     console.log('home button clicked');
 })
 
@@ -55,12 +60,12 @@ else if(div.contains(createcontactDiv)){
     createmenuDiv.className='menu-div';
     div.appendChild(createmenuDiv);
     const menuDiv = document.querySelector('.menu-div');
-   // console.log(createmenuDiv.classList.contains('menu-div'));
     h1.textContent="menu button pressed";
     menuDiv.appendChild(h1);
     console.log('menu button clicked');
     
 })
+
 contactButton.addEventListener('click',()=>{
     if(div.contains(createhomeDiv)){
         div.removeChild(createhomeDiv);
