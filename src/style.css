@@ -12,3 +12,19 @@ header{
 p {
     white-space: pre;
   }
+  ul{
+    padding:0;
+   
+  }
+ul{
+    font-size: 60;
+  }
+  li{
+    font-size: 30;
+  }
+  h2{
+    font-size: 60;
+  }
+  legend{
+    font-size: 60;
+  }

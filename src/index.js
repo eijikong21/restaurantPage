@@ -1,6 +1,4 @@
 import './style.css';
-const newUl = document.createElement('ul');
-const newLi = document.createElement('li');
 const div = document.getElementById('content');
 const img = document.createElement('img');
 const h1 = document.createElement('h1');
@@ -13,8 +11,8 @@ const createmenuDiv = document.createElement('div');
 const createcontactDiv = document.createElement('div');
 const newDiv = document.createElement('div');
 
-
-
+let display=false;
+let contactDisplay=false;
 console.log('test');
 createhomeDiv.className='home-div';
 div.appendChild(createhomeDiv);
@@ -54,14 +52,60 @@ menuButton.addEventListener('click',()=>{
 else if(div.contains(createcontactDiv)){
  div.removeChild(createcontactDiv);
 }
-
     
-   
-    createmenuDiv.className='menu-div';
-    div.appendChild(createmenuDiv);
+
+createmenuDiv.className='menu-div';
+div.appendChild(createmenuDiv);
+    
+    if(display==false){
     const menuDiv = document.querySelector('.menu-div');
-    h1.textContent="menu button pressed";
-    menuDiv.appendChild(h1);
+    const menuHeader = document.createElement('h2');
+    menuHeader.textContent="Menu";
+    menuDiv.appendChild(menuHeader);
+    for (let i = 0; i < 3; i++){
+    const newUl = document.createElement('ul');
+        menuDiv.appendChild(newUl);
+        switch(i){
+            case 0: newUl.textContent='Meals'
+            break;
+            case 1: newUl.textContent='Beverages'
+            break;
+            case 2: newUl.textContent='Dessert'
+            break;  
+        }
+         for (let j = 0; j < 3; j++) {
+            const newLi = document.createElement('li');
+            newUl.appendChild(newLi);
+        }
+    }
+    const allLi = menuDiv.querySelectorAll('li');
+ 
+    allLi.forEach((li, index) => {
+      
+             switch(index){
+            case 0: li.textContent='Spaghetti'
+            break;
+            case 1: li.textContent='Chicken'
+            break;
+            case 2: li.textContent='Beef Steak'
+            break;
+            case 3: li.textContent='Coffee'
+            break;
+            case 4: li.textContent='Milk'
+            break;
+            case 5: li.textContent='Juice'
+            break;
+            case 6: li.textContent='Ice cream'
+            break;
+            case 7: li.textContent='Cake'
+            break;
+            case 8: li.textContent='Chocolate'
+            break;
+        }
+    });
+                            }
+                            display=true;
+    
     console.log('menu button clicked');
     
 })
@@ -75,9 +119,36 @@ else if(div.contains(createmenuDiv)){
 }
     createcontactDiv.className='contact-div';
     div.appendChild(createcontactDiv);
+    if(contactDisplay==false){
     const contactDiv = document.querySelector('.contact-div');
-    h1.textContent="contact button pressed";
-    contactDiv.appendChild(h1);
-    console.log('menu button clicked');
     console.log('contact button clicked');
+    const createFieldset = document.createElement('fieldset');
+    for (let j = 0; j < 4; j++) {
+        const newLi = document.createElement('li');
+        createFieldset.appendChild(newLi);
+    }
+    const link = document.createElement('a');
+    const allLi = createFieldset.querySelectorAll('li');
+    allLi.forEach((li, index) => {
+      
+        switch(index){
+       case 0: link.href = 'https://www.facebook.com/';
+       link.textContent = 'Facebook';
+       li.textContent='Social: ';
+        li.appendChild(link);
+       break;
+       case 1: li.textContent='Number: 09XX-XXX-XXXX'
+       break;
+       case 2: li.textContent='Email: restau@test.com'
+       break;
+       case 3: li.textContent='Address: this is a test address, enter your address here'
+       break;
+   }
+});
+    const createLegend = document.createElement('legend');
+    contactDiv.appendChild(createFieldset);
+    createLegend.textContent='Contact Us';
+    createFieldset.appendChild(createLegend);
+}
+   contactDisplay=true;
 })
