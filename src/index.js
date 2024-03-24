@@ -19,11 +19,11 @@ div.appendChild(createhomeDiv);
 const homeDiv = document.querySelector('.home-div');
 img.src='https://cdn.pixabay.com/photo/2017/07/15/13/45/french-restaurant-2506490_960_720.jpg';
 h1.textContent='Welcome to our Restaurant Webpage';
-p.textContent='Our restaurant aims to serve you the best and unique food that you\n would ever taste in your entire life, so what are you waiting for dont\n waste the chance of consuming food in our wonderful place';
-homeDiv.appendChild(img);
+p.textContent='Our restaurant aims to serve you the best and unique food that you\n would ever taste in your entire life, so what are you waiting for dont\n waste the chance of consuming food in our wonderful place.';
+
 homeDiv.appendChild(h1);
 homeDiv.appendChild(p);
-
+homeDiv.appendChild(img);
 homeButton.addEventListener('click',()=>{
    
     if(div.contains(createcontactDiv)){
@@ -35,13 +35,14 @@ homeButton.addEventListener('click',()=>{
        
     img.src='https://cdn.pixabay.com/photo/2017/07/15/13/45/french-restaurant-2506490_960_720.jpg';
     h1.textContent='Welcome to our Restaurant Webpage';
-    p.textContent='Our restaurant aims to serve you the best and unique food that you\n would ever taste in your entire life, so what are you waiting for dont\n waste the chance of consuming food in our wonderful place';
+    p.textContent='Our restaurant aims to serve you the best and unique food that you\n would ever taste in your entire life, so what are you waiting for dont\n waste the chance of consuming food in our wonderful place.';
     createhomeDiv.className='home-div';
     div.appendChild(createhomeDiv);
     const homeDiv = document.querySelector('.home-div');
-    homeDiv.appendChild(img);
+    
     homeDiv.appendChild(h1);
     homeDiv.appendChild(p);
+    homeDiv.appendChild(img);
     console.log('home button clicked');
 })
 
